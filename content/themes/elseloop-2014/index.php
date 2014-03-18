@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Ember Starter Kit</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/normalize.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/style.css">
 </head>
 <body>
   <script type="text/x-handlebars">
@@ -16,15 +16,20 @@
   <script type="text/x-handlebars" id="index">
     <ul>
     {{#each item in model}}
-      <li>{{item}}</li>
+      <li>
+        <div>
+          <h2>{{item.title}}</h2>
+          {{{item.content}}}
+        </div>
+      </li>
     {{/each}}
     </ul>
   </script>
 
-  <script src="js/libs/jquery-1.10.2.js"></script>
-  <script src="js/libs/handlebars-1.1.2.js"></script>
-  <script src="js/libs/ember-1.4.0.js"></script>
-  <script src="js/app.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/libs/jquery-1.10.2.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/libs/handlebars-1.1.2.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/libs/ember-1.4.0.js"></script>
+  <script src="<?php echo get_template_directory_uri(); ?>/js/app.js"></script>
   <!-- to activate the test runner, add the "?test" query string parameter -->
   <script src="tests/runner.js"></script>
 </body>
