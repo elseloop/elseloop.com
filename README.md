@@ -13,11 +13,11 @@ To begin, use WordPress for the back-end and Ember.js for the front-end. Build i
   * ~~db~~
   * ~~install WP JSON REST API plugin~~
     * ~~write some dummy posts to test API payload(s) against~~
-2. Theme Setup
+2. ~~Theme Setup~~
   * ~~turn off default WP templating~~ **didn't actualy need to do this afterall**
   * ~~get EmberJS going in theme directory~~
-    * init app()
-    * test default route is working
+    * ~~init app()~~
+    * ~~test default route is working~~
 3. Plan out necessary routes in Ember
   * home (/)
     * list of 10 most recent posts
