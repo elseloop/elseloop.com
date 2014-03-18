@@ -8,51 +8,43 @@ To begin, use WordPress for the back-end and Ember.js for the front-end. Build i
 
 #### The initial plan
 1. Local install setup
---wp skeleton
---fresh git repo
---db
---install WP JSON REST API plugin
-----write some dummy posts to test API payload(s) against
-
+  * wp skeleton
+  * fresh git repo
+  * db
+  * install WP JSON REST API plugin
+    * write some dummy posts to test API payload(s) against
 2. Theme Setup
---turn off default WP templating
---get EmberJS going in theme directory
-----init app()
-----test default route is working
-
+  * turn off default WP templating
+  * get EmberJS going in theme directory
+    * init app()
+    * test default route is working
 3. Plan out necessary routes in Ember
---home (/)
-----list of 10 most recent posts
-------title, link, date, 1-sentence excerpt/summary
---single view (/post/:slug/)
-----post content (body text, meta data, images/embeds)
-----next/previous navigation
-----link home
-
+  * home (/)
+    * list of 10 most recent posts
+      * title, link, date, 1-sentence excerpt/summary
+  * single view (/post/:slug/)
+    * post content (body text, meta data, images/embeds)
+    * next/previous navigation
+    * link home
 4. Ensure routes are working
-
 5. Set up front-end
---Grunt setup (or maybe Gulp? Probably Gulp.)
---initial Sass structure
---base styles
-
-
+  * Grunt setup (or maybe Gulp? Probably Gulp.)
+  * initial Sass structure
+  * base styles
 6. Get styling
---header
---footer
---homepage list
---single body content
---single meta data
---images/embed handling in single view
---single next/prev nav bar
-
+  * header
+  * footer
+  * homepage list
+  * single body content
+  * single meta data
+  * images/embed handling in single view
+  * single next/prev nav bar
 7. Get up on live server
---setup new server?
---backup current site files/db
---replace db
---deploy with Capistrano?
---keep compiled CSS out of repo, compiling on post-deploy hook?
-
+  * setup new server?
+  * backup current site files/db
+  * replace db
+  * deploy with Capistrano?
+  * keep compiled CSS out of repo, compiling on post-deploy hook?
 8. Get blogging!
 
 #### The intended future
