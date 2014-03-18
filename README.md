@@ -59,4 +59,5 @@ To begin, use WordPress for the back-end and Ember.js for the front-end. Build i
 1. About page
 2. Front-end edit & new post handling (Ember Data layer?)
 3. Rebuild portfolio
-4. whatever else arises?
+4. Swap out the WP backend for Rails backend?
+5. whatever else arises?
