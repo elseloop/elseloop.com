@@ -6,6 +6,6 @@ App.Router.map(function() {
 
 App.IndexRoute = Ember.Route.extend({
   model: function() {
-    return Ember.$.getJSON('http://el.dev/wp-json.php/posts');
+    return Ember.$.getJSON('/wp-json.php/posts');
   }
 });
