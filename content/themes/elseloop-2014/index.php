@@ -18,8 +18,9 @@
     {{#each item in model}}
       <li>
         <div>
-          <h2>{{item.title}}</h2>
+          <h2><a {{bind-attr href="item.link"}}>{{item.title}}</a></h2>
           {{{item.content}}}
+          <p><img {{bind-attr src="item.author.avatar"}} alt=""></p>
         </div>
       </li>
     {{/each}}
