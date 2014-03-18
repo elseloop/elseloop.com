@@ -4,3 +4,5 @@
 /db-sync
 /content/upgrade/
 .DS_Store
+/content/plugins/*
+!/content/plugins/json-rest-api/
