@@ -2,9 +2,9 @@
 ### version 4? 5? Something like that...
 
 #### The general idea
-Build out a new site to address immediate needs. Namely, 1) a place to blog about my work in the frontend and related topics I find intriguing, 2) learn some new skills along the way while adhering to best practices, and 3) do everything out in the open, in small steps, as quickly as possible.
+Build out a new site to address immediate needs. Namely, 1) a place to blog about my work in the front-end and related topics I find intriguing, 2) learn some new skills along the way while adhering to best practices, and 3) do everything out in the open, in small steps, as quickly as possible.
 
-To begin, use WordPress for the backend and Ember.js for the frontend. Build incrementally, getting up an MVP version -- blog feed + single view -- as quickly as possible. Loop back and add new features afterward as needed and time permits, starting with rounding out CRUD features on the frontend...
+To begin, use WordPress for the back-end and Ember.js for the front-end. Build incrementally, getting up an MVP version -- blog feed + single view -- as quickly as possible. Loop back and add new features afterward as needed and time permits, starting with rounding out CRUD features on the front-end...
 
 #### The initial plan
 1. Local install setup
@@ -54,3 +54,9 @@ To begin, use WordPress for the backend and Ember.js for the frontend. Build inc
 --keep compiled CSS out of repo, compiling on post-deploy hook?
 
 8. Get blogging!
+
+#### The intended future
+1. About page
+2. Front-end edit & new post handling (Ember Data layer?)
+3. Rebuild portfolio
+4. whatever else arises?
