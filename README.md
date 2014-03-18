@@ -7,7 +7,7 @@ Build out a new site to address immediate needs. Namely, 1) a place to blog abou
 To begin, use WordPress for the back-end and Ember.js for the front-end. Build incrementally, getting up an MVP version -- blog feed + single view -- as quickly as possible. Loop back and add new features afterward as needed and time permits, starting with rounding out CRUD features on the front-end...
 
 #### The initial plan
-1. Local install setup
+1. ~~Local install setup~~
   * ~~wp skeleton~~
   * ~~fresh git repo~~
   * ~~db~~
