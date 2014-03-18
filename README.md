@@ -1,30 +1,56 @@
-# WordPress Skeleton
+## Elseloop.com
+### version 4? 5? Something like that...
 
-This is simply a skeleton repo for a WordPress site. Use it to jump-start your WordPress site repos, or fork it and customize it to your own liking!
+#### The general idea
+Build out a new site to address immediate needs. Namely, 1) a place to blog about my work in the frontend and related topics I find intriguing, 2) learn some new skills along the way while adhering to best practices, and 3) do everything out in the open, in small steps, as quickly as possible.
 
-## Assumptions
+To begin, use WordPress for the backend and Ember.js for the frontend. Build incrementally, getting up an MVP version -- blog feed + single view -- as quickly as possible. Loop back and add new features afterward as needed and time permits, starting with rounding out CRUD features on the frontend...
 
-* WordPress as a Git submodule in `/wp/`
-* Custom content directory in `/content/` (cleaner, and also because it can't be in `/wp/`)
-* `wp-config.php` in the root (because it can't be in `/wp/`)
-* All writable directories are symlinked to similarly named locations under `/shared/`.
+#### The initial plan
+1. Local install setup
+--wp skeleton
+--fresh git repo
+--db
+--install WP JSON REST API plugin
+----write some dummy posts to test API payload(s) against
 
-## Questions & Answers
+2. Theme Setup
+--turn off default WP templating
+--get EmberJS going in theme directory
+----init app()
+----test default route is working
 
-**Q:** Will you accept pull requests?  
-**A:** Maybe — if I think the change is useful. I primarily made this for my own use, and thought people might find it useful. If you want to take it in a different direction and make your own customized skeleton, then just maintain your own fork.
+3. Plan out necessary routes in Ember
+--home (/)
+----list of 10 most recent posts
+------title, link, date, 1-sentence excerpt/summary
+--single view (/post/:slug/)
+----post content (body text, meta data, images/embeds)
+----next/previous navigation
+----link home
 
-**Q:** Why the `/shared/` symlink stuff for uploads?  
-**A:** For local development, create `/shared/` (it is ignored by Git), and have the files live there. For production, have your deploy script (Capistrano is my choice) look for symlinks pointing to `/shared/` and repoint them to some outside-the-repo location (like an NFS shared directory or something). This gives you separation between Git-managed code and uploaded files.
+4. Ensure routes are working
 
-**Q:** What version of WordPress does this track?  
-**A:** The latest stable release. Send a pull request if I fall behind.
+5. Set up front-end
+--Grunt setup (or maybe Gulp? Probably Gulp.)
+--initial Sass structure
+--base styles
 
-**Q:** What's the deal with `local-config.php`?  
-**A:** It is for local development, which might have different MySQL credentials or do things like enable query saving or debug mode. This file is ignored by Git, so it doesn't accidentally get checked in. If the file does not exist (which it shouldn't, in production), then WordPress will used the DB credentials defined in `wp-config.php`.
 
-**Q:** What is `memcached.php`?  
-**A:** This is for people using memcached as an object cache backend. It should be something like: `<?php return array( "server01:11211", "server02:11211" ); ?>`. Programattic generation of this file is recommended.
+6. Get styling
+--header
+--footer
+--homepage list
+--single body content
+--single meta data
+--images/embed handling in single view
+--single next/prev nav bar
 
-**Q:** Does this support WordPress in multisite mode?  
-**A:** It will, starting with WordPress 3.5 (due out in December, 2012). Earlier versions of WordPress don't support Multisite when WordPress is in a subdirectory.
+7. Get up on live server
+--setup new server?
+--backup current site files/db
+--replace db
+--deploy with Capistrano?
+--keep compiled CSS out of repo, compiling on post-deploy hook?
+
+8. Get blogging!
