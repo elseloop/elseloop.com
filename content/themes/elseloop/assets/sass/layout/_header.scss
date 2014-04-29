@@ -1,0 +1,8 @@
+.site-header {
+  min-height: $logo-height;
+  margin-bottom: 1rem;
+
+  @include respond-to($small) {
+    margin-bottom: 2rem;
+  }
+}

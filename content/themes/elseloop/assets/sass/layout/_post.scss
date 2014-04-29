@@ -1,0 +1,74 @@
+.post {
+  display: inline-block;
+  width: 100%;
+  margin: 0 auto 2.5rem;
+  padding: 0 1.5rem 4rem;
+  text-align: center;
+  transition: width .45s ease-out, font-size .25s ease-out;
+  
+  &.single-post {
+    margin-bottom: 0;
+  }
+  
+  @include respond-to($small) {
+    font-size: 1.25rem;
+  }
+  @include respond-to($medium) {
+    width: 80%;
+    left: 10%;
+    margin-bottom: 5rem;
+    padding-bottom: 5rem;
+    font-size: 1.33rem;
+  }
+  @include respond-to($large) {
+    width: 70%;
+    left: 15%;
+    font-size: 1.5rem;
+  }
+
+  p {
+    margin-bottom: 0;
+    
+    &:first-of-type {
+      text-indent: 0;
+    }
+
+  }
+
+  img {
+    
+    &.alignleft {
+      float: left;
+    }
+
+  }
+
+  pre {
+    clear: both;
+  }
+  
+  .blowout {
+    margin: 0 auto 1.2rem;
+    text-align: center;
+
+    @include respond-to($medium) {
+      position: relative;
+      left: -10%;
+      width: 120%;
+      max-width: 120%;
+    }
+
+  }
+
+}
+
+.post-head {
+  text-align: center;
+}
+.content-wrap {
+  text-align: left;
+
+  p {
+    margin-bottom: 1.2rem;
+  }
+}

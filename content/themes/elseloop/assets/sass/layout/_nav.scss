@@ -1,0 +1,17 @@
+.site-nav {
+  width: 100%;
+  text-align: center;
+
+  @include respond-to($small) {
+    width: 50%;
+    min-height: $logo-height;
+    float: right;
+    text-align: right;  
+  }
+  
+  a {
+    display: inline-block;
+    padding: 1em;
+  }
+  
+}

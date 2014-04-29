@@ -1,0 +1,11 @@
+.wrap {
+  @extend %cf;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  .site-header & {
+    padding-top: 2rem;
+  }
+
+}

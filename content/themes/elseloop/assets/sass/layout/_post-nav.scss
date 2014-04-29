@@ -1,0 +1,104 @@
+.post-basement {
+  text-align: left;
+  font-family: $alt-font;
+}
+.post-basement--inner {
+  @extend %cf;
+  position: relative;
+  width: 100%;
+  padding: 0 1.5rem;
+  
+  @include respond-to($small) {
+    font-size: 1.25rem;
+  }
+  @include respond-to($medium) {
+    width: 80%;
+    left: 10%;
+    padding: 0;
+    font-size: 1.33rem;
+  }
+  @include respond-to($large) {
+    width: 70%;
+    left: 15%;
+    font-size: 1.5rem;
+  }
+}
+.comeatmebro {
+  @extend %unstyled;
+  float: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  text-align: center;
+
+  @include respond-to($medium) {
+    float: left;
+    width: 50%;
+    margin-bottom: 0;
+    text-align: left;
+  }
+
+}
+.post-nav {
+  @extend %unstyled;
+  float: none;
+  width: 100%;  
+
+  @include respond-to($medium) {
+    float: right;
+    width: 33%;
+  }
+
+  li {
+    float: left;
+    width: 33%;
+
+    &.allposts {
+      text-align: center;
+    }
+
+    &.next {
+      text-align: right;
+    }
+
+    a {
+      display: block;
+    }
+
+  }
+
+}
+
+.prev-link,
+.next-link {
+  @include hide-text();
+    
+  &:before {
+    content: "";
+    font-size: 2rem;
+    line-height: 1;
+    color: $blue;
+  }
+
+  &:hover:before {
+    color: $txt;
+  }
+
+  &.disabled {
+    
+    &:before {
+      color: $hr-color;
+    }
+
+    &:hover:before {
+      color: $hr-color;
+    }
+  
+  }
+
+}
+.prev-link:before {
+  content: "\276E";
+}
+.next-link:before {
+  content: "\276F";
+}

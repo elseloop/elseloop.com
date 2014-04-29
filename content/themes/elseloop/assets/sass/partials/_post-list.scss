@@ -1,0 +1,56 @@
+.post-list {
+  @extend %unstyled;
+  overflow: scroll;
+  padding: 1rem 2rem 2rem;
+  background-color: white;
+  border: 10px solid $blue;
+  // border-right: 0;
+
+  .postlist-item {
+    position: relative;
+    clear: both;
+    margin-bottom: .5rem;
+    padding: .5rem 0;
+    font-size: 2rem;
+    font-style: italic;
+    border-bottom: 1px solid $hr-color;
+    word-wrap: break-word;
+
+    &:last-of-type {
+      border-bottom: 0;
+    }
+    
+    a {
+      display: block;
+      color: $txt;
+
+      #{$pseudos} {
+        color: $blue;
+      }
+
+    }
+    span {
+      display: block;
+      color: $hr-color;
+      font-family: $alt-font;
+      font-size: 1rem;
+      font-style: normal;
+      text-transform: uppercase;
+    }
+
+  }
+
+}
+.menu-close {
+  padding: 0;
+  text-align: right;
+  color: $txt;
+  font-weight: bold;
+  transition: all .25s ease;
+  cursor: pointer;
+
+  #{$pseudos} {
+    color: $blue;
+  }
+
+}

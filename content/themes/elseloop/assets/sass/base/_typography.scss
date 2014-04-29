@@ -1,0 +1,70 @@
+// Really basic typographic rules
+// (and some overwriting of Normalize)
+body {
+  font-family: $body-font;
+  font-size: 100%;
+  line-height: 1.5;
+  color: $txt;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ol,
+ul,
+p {
+  // only push down, it keeps things saner
+  // and baseline grids easier to maintain
+  margin-top: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $alt-font;
+  font-weight: normal;
+}
+h1 {
+  font-size: $h1-em;
+}
+h2 {
+  font-size: $h2-em;
+}
+h3 {
+  font-size: $h3-em;
+}
+h4 {
+  font-size: $h4-em;
+}
+h5 {
+  font-size: $h5-em;
+}
+h6 {
+  font-size: $h6-em;
+}
+a {
+  @include transition(color .25s);
+  text-decoration: none;
+  color: $blue; 
+
+  #{$pseudos} {
+    text-decoration: none;
+    color: $txt;
+  }
+
+}
+li {
+  list-style-position: outside;
+}
+ol {
+  list-style: decimal-leading-zero;
+}
+code {
+  color: fade-out($txt, .2);
+}
+
+@include placeholder($txt, 400);

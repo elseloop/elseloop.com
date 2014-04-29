@@ -1,4 +1,5 @@
 /shared
+/wp-config.php
 /local-config.php
 /sql-dump-*.sql
 /db-sync

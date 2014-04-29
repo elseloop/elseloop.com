@@ -1,0 +1,50 @@
+$oc-size: 50%;
+$oc-speed: 0.33s;
+$oc-easing: ease;
+
+.app-body {
+  position: relative;
+  left: 0;
+  transition: all $oc-speed $oc-easing;
+  overflow-x: hidden;
+  z-index: 1;
+
+  // &.show-posts {
+  //   left: 100%;
+
+  //   @include respond-to($medium) {
+  //     left: $oc-size;
+  //     left: calc(#{$oc-size} - 10px);
+  //   }
+
+  // }
+
+}
+
+.post-list {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  transition: all $oc-speed $oc-easing;
+  left: -100%;
+
+  @include respond-to($medium) {
+    left: -$oc-size;
+    width: $oc-size;
+  }
+
+  &.on-canvas {
+    left: 0;
+  }
+
+  .menu-close {
+    display: inline-block;
+    float: right;
+    font-size: 3rem;
+    line-height: 1rem;
+    padding: .25em .33em;
+  }
+
+}
